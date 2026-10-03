@@ -418,7 +418,9 @@ function renderFitResult(result) {
 
   if (result.hours) {
     const hours = make('div', 'fit-hours');
-    hours.append(make('p', '', `הערכת חיסכון: ${result.hours.low} עד ${result.hours.high} שעות בשבוע`));
+    const hoursLine = make('p', 'fit-hours-line', `הערכת חיסכון: ${result.hours.low} עד ${result.hours.high} שעות בשבוע`);
+    hoursLine.append(' ', make('span', 'fit-tag', 'הערכה גסה, לא הבטחה'));
+    hours.append(hoursLine);
     if (result.hours.assumption) hours.append(make('p', '', result.hours.assumption));
     box.append(hours);
   }
@@ -487,7 +489,7 @@ async function runFit(data) {
     card.reach('scoring');
     card.startClock('scoring', startedAt);
     const status = await pollJob(API.fitStatus, jobId, startedAt, (s) => {
-      if (s.status === 'pending' && s.stage && s.stage !== 'done') card.reach(s.stage);
+      if (s.status === 'pending' && FIT_STEPS.some((x) => x.key === s.stage)) card.reach(s.stage);
     });
     if (!status.result) throw new JobError('failed');
     card.finish();
