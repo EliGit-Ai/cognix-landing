@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cognix | הטמעת Claude לעסקים קטנים ובינוניים</title>
+  <meta name="description" content="אליהו, מייסד Cognix, מטמיע את Claude של Anthropic בעסקים וארגונים קטנים ובינוניים בישראל: פריסה, חיבור Connectors ו-MCP וליווי שוטף.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FAF9F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1F1E1D" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Frank+Ruhl+Libre:wght@500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">דלגו לתוכן</a>
+
+  <header class="site-head">
+    <div class="wrap head-row">
+      <a class="brand" href="#top" aria-label="Cognix, לראש העמוד">
+        <img src="assets/logo.svg" alt="" width="30" height="30">
+        <span>Cognix</span>
+      </a>
+      <nav class="head-nav" aria-label="ניווט ראשי">
+        <a href="#services">שירותים</a>
+        <a href="#process">תהליך</a>
+        <a href="#about">מי אני</a>
+        <a href="#faq">שאלות</a>
+      </nav>
+      <a class="btn btn-sm" href="#readiness">בדיקת מוכנות</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="top" class="hero" aria-labelledby="heroTitle">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">הטמעת Claude לעסקים וארגונים קטנים ובינוניים</p>
+          <h1 id="heroTitle">Claude בעסק שלכם, מהשיחה הראשונה ועד עבודה שוטפת.</h1>
+          <p class="lead">אני אליהו, מייסד Cognix. אני מלווה עסקים וארגונים קטנים ובינוניים בישראל בהטמעת Claude, הבינה המלאכותית של Anthropic: מהבנת הצרכים, דרך הקמת הארגון וחיבור הכלים שאתם כבר עובדים איתם, ועד ליווי שוטף.</p>
+          <div class="hero-actions">
+            <button type="button" class="btn" data-open-chat>דברו עם תמיר</button>
+            <a class="btn btn-ghost" href="#readiness">בדקו את המוכנות שלכם</a>
+          </div>
+          <p class="hero-note">תמיר הוא העוזר הדיגיטלי (AI) של Cognix. דרכו אפשר גם לקבוע שיחת היכרות של 30 דקות, ללא עלות.</p>
+        </div>
+
+        <figure class="hero-net" aria-hidden="true">
+          <svg viewBox="-80 -10 560 420" class="net">
+            <g class="net-chords">
+              <line x1="200" y1="60" x2="60" y2="200"/>
+              <line x1="60" y1="200" x2="200" y2="340"/>
+              <line x1="101" y1="101" x2="101" y2="299"/>
+              <line x1="299" y1="101" x2="60" y2="200"/>
+              <line x1="299" y1="299" x2="60" y2="200"/>
+            </g>
+            <polyline class="net-arc" pathLength="1" points="299,101 200,60 101,101 60,200 101,299 200,340 299,299"/>
+            <g class="net-nodes">
+              <circle style="--i:0" cx="299" cy="101" r="9"/>
+              <circle style="--i:1" cx="200" cy="60" r="9"/>
+              <circle style="--i:2" cx="101" cy="101" r="9"/>
+              <circle style="--i:3" cx="60" cy="200" r="12"/>
+              <circle style="--i:4" cx="101" cy="299" r="9"/>
+              <circle style="--i:5" cx="200" cy="340" r="9"/>
+              <circle style="--i:6" cx="299" cy="299" r="9"/>
+            </g>
+            <g class="net-labels">
+              <text x="318" y="96" text-anchor="start">Gmail</text>
+              <text x="200" y="34" text-anchor="middle">Drive</text>
+              <text x="84" y="86" text-anchor="end">Slack</text>
+              <text x="38" y="206" text-anchor="end">Projects</text>
+              <text x="84" y="324" text-anchor="end">CRM</text>
+              <text x="200" y="378" text-anchor="middle">מערכת פנימית</text>
+              <text x="318" y="314" text-anchor="start">הצוות</text>
+            </g>
+          </svg>
+          <figcaption class="sr-only">איור: הכלים שאפשר לחבר ל-Claude בארגון.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Why Claude -->
+    <section id="why" class="section" aria-labelledby="whyTitle">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="whyTitle">למה Claude</h2>
+          <p>אני עובד עם Claude בלבד. בחרתי להתמקד במוצר אחד ולהכיר אותו לעומק, במקום להציע "קצת מהכול". כך אני יכול להמליץ לכם על מה שבאמת מתאים, ולא על מה שנוח לי למכור.</p>
+        </header>
+        <div class="cards cards-3">
+          <article class="card">
+            <svg class="card-ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="9" y="5" width="22" height="30" rx="3"/><line x1="14" y1="13" x2="26" y2="13"/><line x1="14" y1="19" x2="26" y2="19"/><line x1="14" y1="25" x2="22" y2="25"/></svg>
+            <h3>מסמכים ארוכים</h3>
+            <p>Claude קורא, מסכם ומנסח מתוך מסמכים ארוכים: חוזים, דוחות, פרוטוקולים והצעות. מי שמקבל את התוצר בודק אותו לפני שמסתמכים עליו.</p>
+          </article>
+          <article class="card">
+            <svg class="card-ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="10" width="30" height="22" rx="3"/><path d="M5 15h12l3-5h-12z"/><circle cx="15" cy="23" r="2.5"/><circle cx="25" cy="23" r="2.5"/></svg>
+            <h3>Projects לצוות</h3>
+            <p>ב-Projects משותפים הצוות עובד עם אותן הנחיות ואותם מסמכי רקע, כך שכל אחד לא מתחיל מאפס.</p>
+          </article>
+          <article class="card">
+            <svg class="card-ico" viewBox="0 0 40 40" aria-hidden="true"><circle cx="10" cy="20" r="4"/><circle cx="30" cy="10" r="4"/><circle cx="30" cy="30" r="4"/><line x1="14" y1="18" x2="26" y2="12"/><line x1="14" y1="22" x2="26" y2="28"/></svg>
+            <h3>Connectors לכלים קיימים</h3>
+            <p>Connectors מחברים את Claude לכלים שאתם כבר עובדים איתם, כמו Drive, Gmail או Slack, כך ש-Claude רואה את המידע שהגדרתם לו, בהרשאות שהוגדרו.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section section-alt" aria-labelledby="servicesTitle">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="servicesTitle">מה אני מציע</h2>
+          <p>שלושה שירותים. המחירים הם נקודת התחלה, והמחיר הסופי נקבע אחרי שיחת היכרות.</p>
+        </header>
+        <div class="cards cards-3">
+          <article class="card service">
+            <h3>פריסת Claude בארגון</h3>
+            <p class="price"><span class="from">החל מ-</span><b>3,900 ₪</b><span class="unit">חד פעמי, עד 15 משתמשים</span></p>
+            <ul class="ticks">
+              <li>בחירה משותפת של התוכנית המתאימה</li>
+              <li>הקמת המשתמשים וההרשאות</li>
+              <li>הגדרת Projects משותפים לצוות</li>
+              <li>הדרכת היכרות של שעה עד שעתיים</li>
+            </ul>
+            <p class="dur">משך משוער: שבוע עד שבועיים</p>
+          </article>
+          <article class="card service">
+            <h3>Connectors ו-MCP</h3>
+            <p class="price"><span class="from">החל מ-</span><b>1,200 ₪</b><span class="unit">לכל Connector קיים</span></p>
+            <p class="price price-2"><span class="from">החל מ-</span><b>6,000 ₪</b><span class="unit">לכל מערכת, MCP מותאם</span></p>
+            <ul class="ticks">
+              <li>Connector קיים: חיבור לכלי כמו Drive, Gmail או Slack. יום עד שלושה ימים לכל אחד</li>
+              <li>MCP מותאם: חיבור שנבנה למערכת פנימית, כמו CRM ייעודי או מערכת הזמנות. שבועיים עד שישה שבועות, לפי מורכבות</li>
+            </ul>
+            <p class="dur">בסוף: חיבור עובד, מתועד ומוגבל להרשאות שהוגדרו</p>
+          </article>
+          <article class="card service">
+            <h3>ליווי שוטף</h3>
+            <p class="price"><span class="from">החל מ-</span><b>1,500 ₪</b><span class="unit">לחודש, עד 5 שעות</span></p>
+            <ul class="ticks">
+              <li>מענה לשאלות הצוות</li>
+              <li>שיפור הנחיות ו-Projects</li>
+              <li>הוספת שימושים חדשים לפי הצורך</li>
+            </ul>
+            <p class="dur">חודשי, בלי התחייבות ארוכה. ביטול בהודעה של 30 יום מראש</p>
+          </article>
+        </div>
+        <p class="price-note"><b>חשוב לדעת:</b> כל המחירים לפני מע"מ. מנוי Claude משולם ישירות ל-Anthropic ואינו כלול במחירים.</p>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="section" aria-labelledby="processTitle">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="processTitle">איך העבודה מתנהלת</h2>
+          <p>חמישה שלבים, ואיש קשר אחד לאורך כולם: אני. אין מסירות בין אנשים בדרך.</p>
+        </header>
+        <ol class="timeline">
+          <li>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <h3>שיחת היכרות</h3>
+            <p>30 דקות, ללא עלות ובלי מחויבות. מדברים על העסק, על מה שגוזל לכם זמן ועל מה שאתם מצפים מ-Claude. אם אני חושב שזה לא מתאים, אגיד לכם את זה.</p>
+          </li>
+          <li>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <h3>אבחון</h3>
+            <p>אילו תהליכים ואילו כלים רלוונטיים, כמה משתמשים יהיו, והאם יש מערכת פנימית שכדאי לחבר.</p>
+          </li>
+          <li>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <h3>אפיון</h3>
+            <p>הצעה כתובה עם היקף, מחיר ולוח זמנים.</p>
+          </li>
+          <li>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <h3>פריסה והדרכה</h3>
+            <p>אחרי אישור ההצעה: הקמת הארגון, חיבור הכלים והדרכת הצוות.</p>
+          </li>
+          <li>
+            <span class="tl-dot" aria-hidden="true"></span>
+            <h3>ליווי שוטף</h3>
+            <p>אם תרצו, כדי שההטמעה תמשיך לעבוד גם אחרי שהפרויקט נסגר.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Live demo -->
+    <section id="demo" class="section section-alt" aria-labelledby="demoTitle">
+      <div class="wrap demo-grid">
+        <div>
+          <h2 id="demoTitle">האתר הזה הוא ההדגמה</h2>
+          <p>תמיר והשאלון בעמוד הזה עובדים באמת. הם בנויים עם Claude ו-n8n, אותם כלים שאיתם אני מפתח אוטומציות AI, והאתר עצמו נכתב בעזרת Claude Code.</p>
+          <p>כשאתם שולחים שאלה לתמיר, אתם רואים בזמן אמת באיזה שלב היא נמצאת. אין כאן אנימציה מזויפת: כל שלב מסומן רק כשהוא באמת קרה.</p>
+          <div class="hero-actions">
+            <button type="button" class="btn" data-open-chat>נסו את תמיר</button>
+            <a class="btn btn-ghost" href="#readiness">מלאו את השאלון</a>
+          </div>
+        </div>
+        <ol class="flow" aria-label="מה קורה כשאתם שולחים שאלה">
+          <li><b>הדף שולח את השאלה</b><span>ל-n8n, ומקבל בחזרה מספר עבודה.</span></li>
+          <li><b>Claude מחפש ומנסח</b><span>תשובה מתוך מאגר הידע של Cognix.</span></li>
+          <li><b>הדף בודק כל שתי שניות</b><span>אם התשובה מוכנה, ומראה לכם את השלב.</span></li>
+          <li><b>התשובה מוצגת</b><span>ובשאלון, הדוח נשמר ונשלח גם למייל שלכם.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section" aria-labelledby="aboutTitle">
+      <div class="wrap about-grid">
+        <div class="about-mark" aria-hidden="true">
+          <span class="initial">א</span>
+        </div>
+        <div>
+          <h2 id="aboutTitle">מי אני</h2>
+          <p class="lead">אני אליהו, מייסד Cognix. אני מטמיע את Claude בעסקים וארגונים קטנים ובינוניים בישראל, ומלווה אותם מהבנת הצרכים ועד עבודה שוטפת.</p>
+          <p>יש לי מעל 20 שנות ניסיון בתשתיות, מערכות ארגוניות והטמעת מערכות מול לקוחות. בתחילת דרכי ליוויתי עסקים קטנים ובינוניים כאיש תמיכה ופתרונות, ומאז ניהלתי תשתיות IT, מערכות Production ותהליכי אפיון, הקמה והטמעה.</p>
+          <p>היום אני מפתח אוטומציות AI עם Claude Code ו-n8n לייעול תהליכי תפעול. בשנת 2026 למדתי פיתוח מערכות AI וסוכני בינה מלאכותית באוניברסיטת חיפה.</p>
+          <p>כשאתם עובדים עם Cognix, יש לכם איש קשר אחד. אני עושה את האבחון, האפיון, ההטמעה וההדרכה בעצמי, והאחריות ישירה: אם משהו לא עובד, אתם יודעים למי לפנות.</p>
+          <p class="muted">Cognix היא עסק חדש. אני לא מציג כאן לקוחות קיימים או מקרי הצלחה שעוד לא קיימים.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founding clients -->
+    <section id="founding" class="section section-alt" aria-labelledby="foundingTitle">
+      <div class="wrap founding">
+        <div class="founding-num" aria-hidden="true"><b>30%</b><span>הנחה</span></div>
+        <div>
+          <h2 id="foundingTitle">תוכנית הלקוחות המייסדים</h2>
+          <p>Cognix חדשה, ואני פותח תוכנית ללקוחות מייסדים. חמשת הלקוחות הראשונים מקבלים <b>30% הנחה</b> על השירותים.</p>
+          <p>בתמורה אני מבקש חוות דעת אמיתית בסוף הפרויקט ואישור לפרסם מקרה בוחן. אתם בוחרים אם המקרה יפורסם בשם העסק או בצורה אנונימית, ואני לא מפרסם דבר בלי אישור שלכם.</p>
+          <p class="spots"><span class="spot-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>חמישה מקומות בלבד</p>
+          <div class="hero-actions">
+            <a class="btn" href="#readiness">התחילו בבדיקת מוכנות</a>
+            <a class="btn btn-ghost" href="mailto:eli.tkg@gmail.com?subject=%D7%AA%D7%95%D7%9B%D7%A0%D7%99%D7%AA%20%D7%94%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA%20%D7%94%D7%9E%D7%99%D7%99%D7%A1%D7%93%D7%99%D7%9D">כתבו לי</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Readiness -->
+    <section id="readiness" class="section" aria-labelledby="readinessTitle">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="readinessTitle">בדיקת מוכנות ל-Claude</h2>
+          <p>שמונה שאלות קצרות על הארגון שלכם. תקבלו ציון מוכנות, מסלול מומלץ והערכת מחיר ראשונית, ואת הדוח המלא במייל.</p>
+        </header>
+
+        <div class="fit-grid">
+          <form id="fitForm" class="fit-form" novalidate>
+            <div class="row-3">
+              <div class="field" data-field="name">
+                <label for="f-name">שם מלא</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" data-msg="נא למלא שם מלא." aria-describedby="err-name">
+                <p class="field-error" id="err-name" hidden></p>
+              </div>
+              <div class="field" data-field="email">
+                <label for="f-email">אימייל</label>
+                <input id="f-email" name="email" type="email" dir="ltr" autocomplete="email" required maxlength="120" data-msg="כתובת האימייל לא תקינה." aria-describedby="err-email">
+                <p class="field-error" id="err-email" hidden></p>
+              </div>
+              <div class="field" data-field="org">
+                <label for="f-org">שם הארגון</label>
+                <input id="f-org" name="org" type="text" autocomplete="organization" required minlength="2" maxlength="100" data-msg="נא למלא את שם הארגון." aria-describedby="err-org">
+                <p class="field-error" id="err-org" hidden></p>
+              </div>
+            </div>
+
+            <fieldset class="field" data-field="industry" aria-describedby="err-industry">
+              <legend>תחום</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="industry" value="professional" required data-msg="נא לבחור תחום."><span>משרד מקצועי</span></label>
+                <label class="opt"><input type="radio" name="industry" value="marketing"><span>שיווק</span></label>
+                <label class="opt"><input type="radio" name="industry" value="software"><span>תוכנה</span></label>
+                <label class="opt"><input type="radio" name="industry" value="retail"><span>קמעונאות</span></label>
+                <label class="opt"><input type="radio" name="industry" value="health"><span>בריאות</span></label>
+                <label class="opt"><input type="radio" name="industry" value="other"><span>אחר</span></label>
+              </div>
+              <p class="field-error" id="err-industry" hidden></p>
+            </fieldset>
+
+            <div class="row-2">
+              <fieldset class="field" data-field="size" aria-describedby="err-size">
+                <legend>מספר עובדים בארגון</legend>
+                <div class="opts">
+                  <label class="opt"><input type="radio" name="size" value="1-10" required data-msg="נא לבחור את גודל הארגון."><span dir="ltr">1–10</span></label>
+                  <label class="opt"><input type="radio" name="size" value="11-50"><span dir="ltr">11–50</span></label>
+                  <label class="opt"><input type="radio" name="size" value="51-250"><span dir="ltr">51–250</span></label>
+                </div>
+                <p class="field-error" id="err-size" hidden></p>
+              </fieldset>
+              <div class="field" data-field="users">
+                <label for="f-users">כמה עובדים ישתמשו ב-Claude?</label>
+                <input id="f-users" name="users" type="number" inputmode="numeric" min="1" max="250" step="1" required data-msg="מספר המשתמשים צריך להיות בין 1 ל-250." aria-describedby="users-hint err-users">
+                <p class="hint" id="users-hint">מספר בין 1 ל-250</p>
+                <p class="field-error" id="err-users" hidden></p>
+              </div>
+            </div>
+
+            <fieldset class="field" data-field="tools" aria-describedby="err-tools">
+              <legend>אילו כלים אתם משתמשים? <span class="hint-inline">(אפשר לבחור כמה)</span></legend>
+              <div class="opts">
+                <label class="opt"><input type="checkbox" name="tools" value="google"><span>Google Workspace</span></label>
+                <label class="opt"><input type="checkbox" name="tools" value="microsoft"><span>Microsoft 365</span></label>
+                <label class="opt"><input type="checkbox" name="tools" value="slack"><span>Slack</span></label>
+                <label class="opt"><input type="checkbox" name="tools" value="crm"><span>CRM</span></label>
+                <label class="opt"><input type="checkbox" name="tools" value="other"><span>אחר</span></label>
+              </div>
+              <p class="field-error" id="err-tools" hidden></p>
+            </fieldset>
+
+            <fieldset class="field" data-field="internal" aria-describedby="internal-hint err-internal">
+              <legend>יש מערכת פנימית שתרצו לחבר ל-Claude?</legend>
+              <p class="hint" id="internal-hint">למשל CRM ייעודי או מערכת הזמנות</p>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="internal" value="yes" required data-msg="נא לבחור אחת מהאפשרויות."><span>כן</span></label>
+                <label class="opt"><input type="radio" name="internal" value="no"><span>לא</span></label>
+                <label class="opt"><input type="radio" name="internal" value="unsure"><span>לא בטוח/ה</span></label>
+              </div>
+              <p class="field-error" id="err-internal" hidden></p>
+            </fieldset>
+
+            <fieldset class="field" data-field="painPoints" aria-describedby="err-painPoints">
+              <legend>מה הכי גוזל זמן? <span class="hint-inline">(לפחות אחד)</span></legend>
+              <div class="opts">
+                <label class="opt"><input type="checkbox" name="painPoints" value="email"><span>מיילים</span></label>
+                <label class="opt"><input type="checkbox" name="painPoints" value="docs"><span>מסמכים</span></label>
+                <label class="opt"><input type="checkbox" name="painPoints" value="reports"><span>דוחות</span></label>
+                <label class="opt"><input type="checkbox" name="painPoints" value="support"><span>שירות לקוחות</span></label>
+                <label class="opt"><input type="checkbox" name="painPoints" value="research"><span>מחקר</span></label>
+                <label class="opt"><input type="checkbox" name="painPoints" value="other"><span>אחר</span></label>
+              </div>
+              <p class="field-error" id="err-painPoints" hidden></p>
+            </fieldset>
+
+            <fieldset class="field" data-field="aiUse" aria-describedby="err-aiUse">
+              <legend>האם אתם כבר משתמשים ב-AI?</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="aiUse" value="none" required data-msg="נא לבחור אחת מהאפשרויות."><span>לא</span></label>
+                <label class="opt"><input type="radio" name="aiUse" value="informal"><span>באופן פרטי ולא מסודר</span></label>
+                <label class="opt"><input type="radio" name="aiUse" value="organized"><span>כן, באופן מסודר</span></label>
+              </div>
+              <p class="field-error" id="err-aiUse" hidden></p>
+            </fieldset>
+
+            <div class="hp" aria-hidden="true">
+              <label for="f-website">אתר (השאירו ריק)</label>
+              <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="field" data-field="consent">
+              <label class="consent" for="f-consent">
+                <input id="f-consent" name="consent" type="checkbox" required data-msg="נא לאשר את הודעת הפרטיות." aria-describedby="err-consent">
+                <span>קראתי את <a href="privacy.html" target="_blank" rel="noopener">הודעת הפרטיות</a> ואני מסכים/ה לקבל את הדוח במייל</span>
+              </label>
+              <p class="field-error" id="err-consent" hidden></p>
+            </div>
+
+            <p id="fitFormError" class="field-error" role="alert" hidden></p>
+            <button id="fitSubmit" type="submit" class="btn btn-wide">שלחו וקבלו דוח</button>
+          </form>
+
+          <aside id="fitPanel" class="fit-panel" aria-label="תוצאת הבדיקה">
+            <div id="fitIntro" class="fit-intro">
+              <h3>מה תקבלו</h3>
+              <ul class="ticks">
+                <li>ציון מוכנות מ-0 עד 100</li>
+                <li>מסלול מומלץ והערכת מחיר ראשונית לפי המחירון</li>
+                <li>הערכת שעות חיסכון, עם ההנחה שמאחוריה</li>
+                <li>הדוח המלא במייל</li>
+              </ul>
+              <p class="muted">הבדיקה לוקחת בדרך כלל 15 עד 40 שניות. זו הערכה ראשונית ולא הצעת מחיר מחייבת.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-alt" aria-labelledby="faqTitle">
+      <div class="wrap faq-wrap">
+        <h2 id="faqTitle">שאלות נפוצות</h2>
+        <div class="faq">
+          <details>
+            <summary>כמה זה עולה?</summary>
+            <p>המחירים הם החל מ-: פריסה החל מ-3,900 ₪, Connector קיים החל מ-1,200 ₪, MCP מותאם החל מ-6,000 ₪ לכל מערכת, וליווי שוטף החל מ-1,500 ₪ לחודש. כל המחירים לפני מע"מ. המחיר הסופי נקבע אחרי שיחת היכרות.</p>
+          </details>
+          <details>
+            <summary>האם מנוי Claude כלול במחיר?</summary>
+            <p>לא. מנוי Claude משולם ישירות ל-Anthropic ואינו כלול במחירים שלי. את התוכנית המתאימה נבחר יחד בשיחת האבחון, לפי מספר המשתמשים והצרכים.</p>
+          </details>
+          <details>
+            <summary>כמה זמן לוקחת פריסה?</summary>
+            <p>בדרך כלל שבוע עד שבועיים. חיבור Connector לוקח יום עד שלושה ימים לכל אחד, ו-MCP מותאם שבועיים עד שישה שבועות.</p>
+          </details>
+          <details>
+            <summary>האם צריך ידע טכני כדי להתחיל?</summary>
+            <p>לא. אני מקים את הסביבה, ובהדרכת ההיכרות אני מסביר לצוות איך עובדים עם Claude ביומיום.</p>
+          </details>
+          <details>
+            <summary>האם המידע של הארגון בטוח?</summary>
+            <p>אני עובד בהרשאות מינימליות, בתוך סביבת Claude שלכם, ולא שומר עותקים של המידע. גישת מנהל שקיבלתי מוחזרת אליכם בסוף הפרויקט. מה Anthropic עושה עם המידע מתועד ב-<a href="https://support.claude.com" target="_blank" rel="noopener noreferrer" dir="ltr">support.claude.com</a>, ושם כדאי לקרוא את המידע העדכני.</p>
+          </details>
+          <details>
+            <summary>יש לכם לקוחות?</summary>
+            <p>Cognix היא עסק חדש, ולכן אין עדיין לקוחות להציג. תוכנית הלקוחות המייסדים פתוחה, ובה אני בונה את מקרי הבוחן הראשונים.</p>
+          </details>
+          <details>
+            <summary>האם אתם קשורים רשמית ל-Anthropic?</summary>
+            <p>לא. Cognix היא עסק עצמאי, ו-Claude הוא סימן מסחרי של Anthropic.</p>
+          </details>
+          <details>
+            <summary>האם Claude עובד בעברית?</summary>
+            <p>כן, Claude עובד בעברית.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-row">
+      <div class="brand brand-foot">
+        <img src="assets/logo.svg" alt="" width="26" height="26">
+        <span>Cognix</span>
+      </div>
+      <p><a href="mailto:eli.tkg@gmail.com" dir="ltr">eli.tkg@gmail.com</a> · <a href="privacy.html">הודעת פרטיות</a></p>
+      <p class="tm">Claude הוא סימן מסחרי של Anthropic. Cognix היא עסק עצמאי.</p>
+    </div>
+  </footer>
+
+  <!-- Chat -->
+  <button id="chatOpen" type="button" class="chat-fab" data-open-chat aria-label="פתיחת צ'אט עם תמיר" aria-haspopup="dialog" aria-controls="chat">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/></svg>
+  </button>
+
+  <dialog id="chat" class="chat" aria-labelledby="chatTitle">
+    <div class="chat-shell">
+      <header class="chat-head">
+        <img src="assets/logo.svg" alt="" width="28" height="28">
+        <div>
+          <h2 id="chatTitle">תמיר</h2>
+          <p>העוזר הדיגיטלי (AI) של Cognix · <span id="chatState" class="chat-state">● זמין</span></p>
+        </div>
+        <button id="chatClose" type="button" class="icon-btn" aria-label="סגירת הצ'אט">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </header>
+      <div id="messages" class="messages" role="log" aria-live="polite" aria-label="שיחה עם תמיר">
+        <div class="bubble bot intro">שלום, אני תמיר, העוזר הדיגיטלי של Cognix. אני עוזר AI ולא אדם. אפשר לשאול אותי על השירותים, על המחירים או על Claude, ואם תרצו, לקבוע שיחת היכרות עם אליהו.</div>
+      </div>
+      <div id="chips" class="chips" aria-label="שאלות לדוגמה">
+        <button type="button" class="chip">כמה עולה פריסה?</button>
+        <button type="button" class="chip">מה זה Connector?</button>
+        <button type="button" class="chip">אני לא בטוח מה אני צריך</button>
+      </div>
+      <form id="composer" class="composer">
+        <label for="chatInput" class="sr-only">ההודעה שלכם לתמיר</label>
+        <textarea id="chatInput" rows="1" maxlength="2000" placeholder="כתבו לתמיר…" autocomplete="off"></textarea>
+        <button id="sendBtn" type="submit" class="send" aria-label="שליחה">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+        </button>
+      </form>
+      <p class="chat-foot">תמיר עלול לטעות. המחיר הסופי נקבע בשיחת היכרות.</p>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

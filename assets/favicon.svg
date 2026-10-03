@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="7" fill="#FAF9F5"/>
+  <g fill="none" stroke="#C2603F" stroke-width="1.4" stroke-linecap="round">
+    <polyline points="22.6,9.4 16,6.7 9.4,9.4 6.7,16 9.4,22.6 16,25.3 22.6,22.6"/>
+  </g>
+  <g fill="#C2603F">
+    <circle cx="22.6" cy="9.4" r="2.3"/>
+    <circle cx="16" cy="6.7" r="2.3"/>
+    <circle cx="9.4" cy="9.4" r="2.3"/>
+    <circle cx="6.7" cy="16" r="2.6"/>
+    <circle cx="9.4" cy="22.6" r="2.3"/>
+    <circle cx="16" cy="25.3" r="2.3"/>
+    <circle cx="22.6" cy="22.6" r="2.3"/>
+  </g>
+</svg>

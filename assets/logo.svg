@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Cognix">
+  <g fill="none" stroke="#C2603F" stroke-width="1.1" stroke-linecap="round" opacity=".75">
+    <polyline points="23.78,8.22 16,5 8.22,8.22 5,16 8.22,23.78 16,27 23.78,23.78"/>
+    <line x1="16" y1="5" x2="5" y2="16"/>
+    <line x1="5" y1="16" x2="16" y2="27"/>
+  </g>
+  <g fill="#C2603F">
+    <circle cx="23.78" cy="8.22" r="2.1"/>
+    <circle cx="16" cy="5" r="2.1"/>
+    <circle cx="8.22" cy="8.22" r="2.1"/>
+    <circle cx="5" cy="16" r="2.4"/>
+    <circle cx="8.22" cy="23.78" r="2.1"/>
+    <circle cx="16" cy="27" r="2.1"/>
+    <circle cx="23.78" cy="23.78" r="2.1"/>
+  </g>
+</svg>
