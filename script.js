@@ -57,7 +57,7 @@ async function fetchJson(url, options = {}) {
   let data = null;
   try { data = await res.json(); } catch { /* handled below */ }
   if (res.status === 400 && data && data.error) throw new JobError('invalid', data);
-  if (res.status === 429) throw new JobError('busy', data);
+  if (res.status === 429 || res.status === 503) throw new JobError('busy', data);
   if (!res.ok || !data) throw new JobError('server');
   return data;
 }
