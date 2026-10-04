@@ -29,6 +29,7 @@ const FIT_ERRORS = {
   failed: { title: 'הבדיקה נכשלה באמצע', action: `נסו לשלוח שוב. אם זה חוזר, ${WRITE_US}` },
   notFound: { title: 'הבקשה לא נמצאה במערכת', action: 'שלחו את הטופס שוב.' },
   timeout: { title: 'הבדיקה מתעכבת יותר מהרגיל', action: 'ייתכן שהדוח עוד יגיע למייל. אפשר גם לנסות שוב.' },
+  busy: { title: 'המערכת עמוסה כרגע', action: `נסו שוב מחר, או ${WRITE_US}` },
 };
 
 const $ = (sel) => document.querySelector(sel);
@@ -56,6 +57,7 @@ async function fetchJson(url, options = {}) {
   let data = null;
   try { data = await res.json(); } catch { /* handled below */ }
   if (res.status === 400 && data && data.error) throw new JobError('invalid', data);
+  if (res.status === 429) throw new JobError('busy', data);
   if (!res.ok || !data) throw new JobError('server');
   return data;
 }
@@ -195,13 +197,17 @@ function fillWithLinks(el, text) {
   const parts = String(text).split(/(https?:\/\/[^\s)]+)/g);
   for (const part of parts) {
     if (/^https?:\/\//.test(part)) {
+      // Trailing sentence punctuation stays outside the link (put back as text).
+      const m = part.match(/^(.*?)([.,;:!?״"']+)$/);
+      const url = m ? m[1] : part;
       const a = document.createElement('a');
-      a.href = part;
-      a.textContent = part;
+      a.href = url;
+      a.textContent = url;
       a.target = '_blank';
       a.rel = 'noopener noreferrer';
       a.dir = 'ltr';
       el.appendChild(a);
+      if (m) el.appendChild(document.createTextNode(m[2]));
     } else if (part) {
       el.appendChild(document.createTextNode(part));
     }
@@ -504,7 +510,10 @@ async function runFit(data) {
     } else {
       const kind = err instanceof JobError && FIT_ERRORS[err.kind] ? err.kind : 'server';
       console.warn('[cognix-fit]', kind, err);
-      card.error(FIT_ERRORS[kind], () => { runFit(data); });
+      const info = kind === 'busy' && err.data && typeof err.data.error === 'string'
+        ? { ...FIT_ERRORS.busy, action: err.data.error }
+        : FIT_ERRORS[kind];
+      card.error(info, () => { runFit(data); });
     }
   } finally {
     fitBusy = false;
